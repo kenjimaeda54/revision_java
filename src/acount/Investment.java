@@ -1,6 +1,6 @@
 package acount;
 
-public interface investment {
+public interface Investment {
     double calculateInvestment(int value);
 
 }

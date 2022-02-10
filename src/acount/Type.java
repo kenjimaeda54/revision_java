@@ -1,5 +1,5 @@
 package acount;
 
-public enum type {
+public enum Type {
     COMMON,SPECIAL,PREMIUM
 }
