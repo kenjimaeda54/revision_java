@@ -7,7 +7,13 @@ public class Savings extends Account implements Investment {
 
 
     final Float revenue;
-    private float rate;
+    private float rate= 0.3F;
+
+
+    public Savings(Float investment) {
+        this.revenue = investment * 0.3F;
+        this.rate = rate;
+    }
 
     public Savings(Float investment, Float rate) {
         this.revenue = investment * 0.3F;

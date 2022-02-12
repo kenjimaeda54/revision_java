@@ -1,4 +1,5 @@
 import acount.current.Current;
+import acount.savings.Savings;
 
 import java.awt.*;
 
@@ -9,7 +10,8 @@ public class main {
         Current  currentTwo = new Current("SPECIAL");
         Current  currentThree = new Current("COMMON");
         Current  currentFour = new Current("PREMIUM");
-        
+
+        Savings  savingsOne =  new Savings( 12.3F);
 
         currentOne.deposit(10.2);
         currentOne.withdraw(20);
