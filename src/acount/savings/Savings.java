@@ -13,25 +13,27 @@ public class Savings extends Account implements Investment {
         this.revenue = investment * 0.3F;
         this.rate = rate;
     }
-    
+
 
     @Override
-    public String deposit(double value) {
-        return "";
+    public double deposit(double value) {
+        balance += value;
+        return balance;
     }
 
     @Override
-    public String withdraw(double value) {
-        double total = (balance - value) * this.rate;
-        if(total < 0 ){
-            return "Exception,you dont have balance sufficient";
-        }
-        return "Success,your balance current is R$"+total;
+    public double withdraw(double value) {
+        balance = (balance - value) * this.rate;
+        return balance;
     }
 
     @Override
-    public String calculateInvestment(double investment) {
-        double total = balance * revenue;
-        return "Success, now you have total balance R$"+total;
+    public double calculateInvestment(double investment) {
+        balance *= revenue;
+        return balance;
+    }
+
+    public  String toString () {
+        return +balance < 0 ?  "Exception you dont have balance sufficient": "Success your balance now is R$"+balance;
     }
 }

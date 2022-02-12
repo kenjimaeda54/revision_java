@@ -11,27 +11,30 @@ public class Current extends Account {
 
     Type type;
 
-    Current() {
+    public Current() {
 
     }
 
-    Current(String type) {
+    public Current(String type) {
        this.type = Type.valueOf(type);
     }
 
     @Override
-    public String deposit(double value) {
-        double total = balance + value;
-        return "Success balance current is R$"+total;
+    public double deposit(double value) {
+        balance += value;
+        return balance;
     }
 
     @Override
-    public String withdraw(double value) {
-        double total = balance - value;
-        if(total < 0  && type == COMMON ){
-           return "Exception,you dont have balance sufficient";
-        }
-        return "Withdraw with success. Balance R$"+total;
+    public double withdraw(double value) {
+        balance -= value;
+        return balance;
     }
+
+    public  String  toString() {
+        return +balance < 0 && type == COMMON ?  "Exception you dont have balance sufficient": "Success your balance now is R$ "+balance;
+
+    }
+
 
 }

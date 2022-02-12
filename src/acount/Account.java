@@ -23,8 +23,8 @@ public abstract class Account {
          this.balance = balance;
      }
 
-     public abstract    String  deposit(double value);
-     public abstract    String   withdraw(double value);
+     public abstract    double  deposit(double value);
+     public abstract    double   withdraw(double value);
 
 
 }
