@@ -20,15 +20,18 @@ public class Current extends Account {
     }
 
     @Override
-    public double deposit(double value) {
-        return balance + value;
+    public String deposit(double value) {
+        double total = balance + value;
+        return "Success balance current is R$"+total;
     }
 
     @Override
-    public double withdraw(double value) {
-        return value;
+    public String withdraw(double value) {
+        double total = balance - value;
+        if(total < 0  && type == COMMON ){
+           return "Exception,you dont have balance sufficient";
+        }
+        return "Withdraw with success. Balance R$"+total;
     }
-
-
 
 }

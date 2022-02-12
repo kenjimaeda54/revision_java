@@ -1,6 +1,6 @@
 package acount;
 
 public interface Investment {
-    double calculateInvestment(int value);
+    String calculateInvestment(double investment);
 
 }
