@@ -9,7 +9,7 @@ import static acount.Type.COMMON;
 public class Current extends Account {
 
 
-    Type type;
+    Type type = COMMON;
 
     public Current() {
 

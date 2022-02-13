@@ -10,10 +10,14 @@ public class main {
         Current  currentTwo = new Current("SPECIAL");
         Current  currentThree = new Current("COMMON");
         Current  currentFour = new Current("PREMIUM");
+        Current  currentFive  = new Current();
 
         Savings  savingsOne =  new Savings();
         Savings  savingsTwo =  new Savings();
         Savings  savingsThree = new Savings(1.03F);
+
+
+
 
         currentOne.deposit(10.2);
         currentOne.withdraw(20);
@@ -30,6 +34,10 @@ public class main {
         currentFour.deposit(15.3);
         currentFour.withdraw(13.3);
         System.out.println(currentFour);
+
+        currentFive.deposit(10);
+        currentFive.withdraw(50);
+        System.out.println(currentFive);
         System.out.println();
 
         savingsOne.deposit(25.3);
